@@ -162,11 +162,84 @@ body {
     filter: brightness(200%); /* Aumenta el brillo para dar un efecto de blanco */
 }
 
+.header-index .checkbtn {
+    z-index: 1;
+    display: none;
+    color: #CCCCCC;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+} 
+
 /*media query inicio*/
 
-@media only screen and (max-width:1024) {
-    
+@media only screen and (max-width:1024px) {
+
+.header-index {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 35px;
+    margin-right: 35px;
 }
+
+.header-index .checkbtn {
+    display: block;
+}
+
+.barra-nav-inicio {
+    position: fixed;
+    background: #030000;
+    width: 80%;
+    height: 50%;
+    right: -100%;
+    transition: right 0.5s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 60%;
+    margin-top: 40px;
+    border: none;
+}
+
+.barra-nav-inicio .nav-item {
+    display: block;
+    line-height: 10px;
+    border: none;
+}
+
+.header-index .nav-tabs {
+    border: black solid;
+    padding: 40px 0px;
+}
+
+
+#check:checked ~ .nav-container .barra-nav-inicio {
+    right: 0;
+}
+
+.logo-blanco{
+    width: 110px;
+    height: 150px;
+} 
+
+.titulo {
+    font-size: 350%;
+    text-align: center;
+    font-weight: 200;
+}
+
+.sub-titulo {
+    font-size: 120%;
+    font-weight: 100;
+}
+
+}
+
+
 
 /*END*/
 
