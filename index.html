@@ -16,8 +16,8 @@
 <body>
   <div class="container-fluid">
 
-    <video autoplay muted loop id="video-background" class="position-absolute end-0 bottom-0 h-auto w-auto">
-      <source src="./imagenes-videos/video-inicio.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline id="video-background" class="position-absolute end-0 bottom-0 h-auto w-auto video-background">
+      <source src="./imagenes-videos/video-inicio2.mp4" type="video/mp4">
     </video>
 
     <section class="row pag-index">
@@ -50,5 +50,17 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var video = document.getElementById('video-background');
+        video.play().catch(function(error) {
+            /*si la reproduccion automatica falla, reproduce de nuevo con js*/
+            video.muted = true;
+            video.play();
+        });
+    });
+</script>
+
 </body>
 </html>
