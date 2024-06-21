@@ -1,0 +1,98 @@
+/*$color-black: black;
+$color-dimgrey: dimgrey;
+$color-background: #A19B88;
+$color-hover: #2C2918;
+
+$font-size-copyrigths: 50%;
+$font-size-titulo-servicios: 400%;
+$font-size-subtitulo-servicios: 125%;
+$font-size-boton-contacto: 90%;
+$font-size-titulos-servicios: 100%;
+$font-size-descripcion-serv: 90%;
+$font-size-tipos-servicios: 100%;
+$font-size-descripcion-servicios: 90%;
+$font-size-titulo-portafolio: 375%;
+$font-size-subtitulo-portafolio: 125%;
+$font-size-titulo-nosotros: 310%;
+$font-size-pilares: 95%;
+$font-size-boton-nosotros: 90%;
+$font-size-p-nosotros: 95%;
+$font-size-datos-contacto: 75%;
+$font-size-titulo-datos: 87.5%;
+$font-size-formulario: 75%;
+$font-size-enviar: 81.25%;*/
+
+$raleway: 'Raleway', sans-serif;
+
+                                                /* DISEÑOS GENERALES */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.copyrigths {
+    font-family: $raleway;
+    font-optical-sizing: auto;
+    font-size: $font-size-copyrigths;
+    text-align: center;
+    font-weight: normal;
+    color: $color-black;
+    margin: 0;
+    padding-left: 3%;
+}
+
+.fondo-footer {
+    width: 100%;
+    height: 122px;
+}
+
+.logo-footer {
+    width: 170px;
+    height: 43px;
+}
+
+.rrss-footer {
+    width: 32px;
+    height: 32px;
+    &:hover {
+        opacity: 0.7;
+        filter: brightness(150%);
+    }
+}
+
+.logo-nav {
+    width: 220px;
+    height: 50px;
+}
+
+.logo-responsive {
+    display: none;
+}
+
+.redes-sociales {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 220px;
+    margin: 0;
+}
+
+.logo-blanco {
+    display: flex;
+    width: 150px;
+    height: 206px;
+    flex-wrap: wrap;
+}
+
+.pag-index {
+    height: 100vh;
+}
+
+
+/*END*/
+
+
+@import "_index.scss";
+@import "_index.scss"

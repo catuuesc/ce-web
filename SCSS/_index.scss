@@ -1,0 +1,91 @@
+/*VARIABLES*/
+$raleway: 'Raleway', sans-serif;
+$font-size-titulo: 437.5%;
+$font-size-subtitulo: 162.5%;
+$white: white;
+
+/*END*/
+
+
+.header-index {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 220px;
+    align-items: center;
+
+    .nav li .inicio {
+        color: $white;
+        z-index: 100;
+    }
+}
+
+.nav-container {
+    padding-bottom: 5%;
+    padding-left: 5%;
+}
+
+.logo {
+    padding-top: 2%;
+    padding-right: 4%;
+    display: flex;
+}
+
+.barra-nav-inicio {
+    width: 550px;
+    justify-content: space-between;
+}
+
+#video-background {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 6%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    z-index: -1;
+}
+
+.titulo {
+    font-family: $raleway;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: $font-size-titulo;
+    color: $white;
+}
+
+.sub-titulo {
+    font-family: $raleway;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    font-size: $font-size-subtitulo;
+    color: $white;
+}
+
+.whatsapp {
+    position: absolute;
+    z-index: 100;
+    right: 2.5%;
+    bottom: 4%;
+    width: 56px;
+    height: 49px;
+    transition: opacity 0.3s ease, filter 0.3s ease;
+
+    &:hover {
+        opacity: 0.7;
+        filter: brightness(200%); /* Aumenta el brillo para dar un efecto de blanco */
+    }
+}
