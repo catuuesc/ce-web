@@ -17,7 +17,7 @@
                 justify-content: space-between;
                 
                 li .inicio {
-                    color: $white;
+                    color: map-get($paleta-colores, Blanco);
                     z-index: 100;
                 } 
             }
@@ -57,7 +57,7 @@
         font-optical-sizing: auto;
         font-weight: 300;
         font-size: $font-size-titulo;
-        color: $white;
+        color: map-get($paleta-colores, Blanco);
     }
 
     .sub-titulo {
@@ -66,7 +66,7 @@
         font-style: normal;
         text-align: center;
         font-size: $font-size-subtitulo;
-        color: $white;
+        color: map-get($paleta-colores, Blanco);
     }
 }
 

@@ -4,7 +4,7 @@
     .checkbtn {
         z-index: 1;
         display: none;
-        color: $color-light-grey;
+        color: map-get($paleta-colores, Blanco);
         font-size: 2.5rem;
         cursor: pointer;
     }
@@ -31,7 +31,7 @@
                 border: black solid;
                 padding: 40px 0px;
                 position: fixed;
-                background: $color-dark-grey; 
+                background: map-get($paleta-colores, Negro); 
                 width: 80%;
                 height: 50%;
                 right: -100%;
@@ -67,13 +67,13 @@
         font-size: 350%;
         text-align: center;
         font-weight: 200;
-        color: $white;
+        color: map-get($paleta-colores, Blanco);
     }
     
     .sub-titulo {
         font-family: $raleway;
         font-size: 120%;
         font-weight: 100;
-        color: $white;
+        color: map-get($paleta-colores, Blanco);
     }
 }
