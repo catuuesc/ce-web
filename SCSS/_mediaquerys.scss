@@ -1,11 +1,4 @@
-$color-light-grey: #CCCCCC;
-$color-dark-grey: #030000;
-$raleway: 'Raleway', sans-serif;
-$white: white;
-
-
-
-/*INDEX*/
+                                /*INDEX*/
 
 .header-index {
     .checkbtn {
@@ -27,37 +20,37 @@ $white: white;
         flex-direction: row-reverse;
         margin-left: 35px;
         margin-right: 35px;
-    }
-
-    .header-index .checkbtn {
-        display: block;
-    }
-
-    .barra-nav-inicio {
-        position: fixed;
-        background: $color-dark-grey; 
-        width: 80%;
-        height: 50%;
-        right: -100%;
-        transition: right 0.5s ease;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        opacity: 0.6; 
-        margin-top: 40px;
-        border: none;
-
-        .nav-item {
+        
+        .checkbtn {
             display: block;
-            line-height: 10px;
-            border: none;
         }
-    }
 
-    .header-index .nav-tabs {
-        border: black solid;
-        padding: 40px 0px;
+        .nav-container {
+
+            .barra-nav-inicio {
+                border: black solid;
+                padding: 40px 0px;
+                position: fixed;
+                background: $color-dark-grey; 
+                width: 80%;
+                height: 50%;
+                right: -100%;
+                transition: right 0.5s ease;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                opacity: 0.6; 
+                margin-top: 40px;
+                border: none;
+
+                .nav-item {
+                    display: block;
+                    line-height: 10px;
+                    border: none;
+                }
+            }
+        }
     }
 
     #check:checked ~ .nav-container .barra-nav-inicio {

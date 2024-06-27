@@ -1,0 +1,16 @@
+$paleta-colores: (
+    white: #CCCCCC,
+    Blanco-invierno: #F7F7F7,
+    Negro: #030000,
+    Mostaza: #DBB41A,
+    Beige: #A19B88,
+    Cafe-oscuro: #2C2918,
+    Gris: #3E3F41,
+)
+
+/*para llamar la paleta a los demas parcials usar:
+
+map-get($paleta-colores, withe);
+
+*/
+

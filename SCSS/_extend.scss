@@ -1,0 +1,19 @@
+.box-servicios {
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    padding: 30px;
+    border: 1px solid #DBB41A;
+    width: 300px;
+    height: 330px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+/*para llamar en otro parcials primero importar al parcial en el que se desea ocupar, y luego poner:
+
+ejemplo {
+    @extend .box-servicios;
+}
+
+*/
