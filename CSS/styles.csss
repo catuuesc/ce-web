@@ -1,0 +1,445 @@
+@charset "UTF-8";
+/*$color-black: black;
+$color-dimgrey: dimgrey;
+$color-background: #A19B88;
+$color-hover: #2C2918;
+
+$font-size-copyrigths: 50%;
+$font-size-titulo-servicios: 400%;
+$font-size-subtitulo-servicios: 125%;
+$font-size-boton-contacto: 90%;
+$font-size-titulos-servicios: 100%;
+$font-size-descripcion-serv: 90%;
+$font-size-tipos-servicios: 100%;
+$font-size-descripcion-servicios: 90%;
+$font-size-titulo-portafolio: 375%;
+$font-size-subtitulo-portafolio: 125%;
+$font-size-titulo-nosotros: 310%;
+$font-size-pilares: 95%;
+$font-size-boton-nosotros: 90%;
+$font-size-p-nosotros: 95%;
+$font-size-datos-contacto: 75%;
+$font-size-titulo-datos: 87.5%;
+$font-size-formulario: 75%;
+$font-size-enviar: 81.25%;*/
+/*maps, variables, mixins, extend*/
+.box-servicios, .grid-servicios .grid-servicios3 .servicio {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+  padding: 30px;
+  border: 1px solid #DBB41A;
+  width: 300px;
+  height: 330px;
+  justify-content: space-around;
+  text-align: center;
+}
+
+/*para llamar en otro parcials primero importar al parcial en el que se desea ocupar, y luego poner:
+
+ejemplo {
+    @extend .box-servicios;
+}
+
+*/
+/*INDEX*/
+.header-index .checkbtn {
+  z-index: 1;
+  display: none;
+  color: #CCCCCC;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+.header-index #check {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .header-index {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+  .header-index .checkbtn {
+    display: block;
+  }
+  .header-index .nav-container .barra-nav-inicio {
+    border: black solid;
+    padding: 40px 0px;
+    position: fixed;
+    background: #030000;
+    width: 80%;
+    height: 50%;
+    right: -100%;
+    transition: right 0.5s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.6;
+    margin-top: 40px;
+    border: none;
+  }
+  .header-index .nav-container .barra-nav-inicio .nav-item {
+    display: block;
+    line-height: 10px;
+    border: none;
+  }
+  #check:checked ~ .nav-container .barra-nav-inicio {
+    right: 0;
+  }
+  .logo-blanco {
+    width: 110px;
+    height: 150px;
+  }
+  .titulo {
+    font-family: "Raleway", sans-serif;
+    font-size: 350%;
+    text-align: center;
+    font-weight: 200;
+    color: #CCCCCC;
+  }
+  .sub-titulo {
+    font-family: "Raleway", sans-serif;
+    font-size: 120%;
+    font-weight: 100;
+    color: #CCCCCC;
+  }
+}
+/*DISEÑOS GENERALES*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.copyrigths {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 50%;
+  text-align: center;
+  font-weight: normal;
+  color: black;
+  margin: 0px;
+  padding-left: 3%;
+}
+
+.fondo-footer {
+  width: 100%;
+  height: 122px;
+}
+
+.logo-footer {
+  width: 170px;
+  height: 43px;
+}
+
+.rrss-footer {
+  width: 32px;
+  height: 32px;
+}
+
+.rrss-footer:hover {
+  opacity: 0.7;
+  filter: brightness(150%);
+}
+
+.logo-nav {
+  width: 220px;
+  height: 50px;
+}
+
+.logo-responsive {
+  display: none;
+}
+
+/*NAV GENERAL*/
+.header-servicios {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px 0px 40px;
+}
+.header-servicios .barra-navegacion {
+  align-items: center;
+  width: 550px;
+  justify-content: space-between;
+}
+.header-servicios .barra-navegacion li a {
+  color: black;
+}
+
+.barra-navegacion .nav-item:hover .nav-link {
+  color: dimgrey;
+}
+
+/*END*/
+.redes-sociales {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 220px;
+  margin: 0px;
+}
+
+.logo-blanco {
+  display: flex;
+  width: 150px;
+  height: 206px;
+  flex-wrap: wrap;
+}
+
+.pag-index {
+  height: 100vh;
+}
+.pag-index .header-index {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 220px;
+  align-items: center;
+}
+.pag-index .header-index .nav-container {
+  padding-bottom: 5%;
+  padding-left: 5%;
+}
+.pag-index .header-index .nav-container .barra-nav-inicio {
+  width: 550px;
+  justify-content: space-between;
+}
+.pag-index .header-index .nav-container .barra-nav-inicio li .inicio {
+  color: #CCCCCC;
+  z-index: 100;
+}
+
+.logo {
+  padding-top: 2%;
+  padding-right: 4%;
+  display: flex;
+}
+
+#video-background {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -2;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 6%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  z-index: -1;
+}
+.overlay .titulo {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 437.5%;
+  color: #CCCCCC;
+}
+.overlay .sub-titulo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-align: center;
+  font-size: 162.5%;
+  color: #CCCCCC;
+}
+
+.whatsapp {
+  position: absolute;
+  z-index: 100;
+  right: 2.5%;
+  bottom: 4%;
+  width: 56px;
+  height: 49px;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+.whatsapp:hover {
+  opacity: 0.7;
+  filter: brightness(200%); /* Aumenta el brillo para dar un efecto de blanco */
+}
+
+.box-servicios, .grid-servicios .grid-servicios3 .servicio {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+  padding: 30px;
+  border: 1px solid #DBB41A;
+  width: 300px;
+  height: 330px;
+  justify-content: space-around;
+  text-align: center;
+}
+
+/*para llamar en otro parcials primero importar al parcial en el que se desea ocupar, y luego poner:
+
+ejemplo {
+    @extend .box-servicios;
+}
+
+*/
+/*servicios*/
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 70px auto auto 60px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../imagenes-videos/servicios-fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.grid-servicios .header-servicios {
+  grid-column: 1/7;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  border-bottom: 1px solid #CCCCCC;
+  flex-wrap: wrap;
+  background-color: white;
+}
+.grid-servicios .titulos-servicios {
+  grid-column: 1/7;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+.grid-servicios .titulos-servicios .titulos {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+}
+.grid-servicios .titulos-servicios .titulos .titulo-servicios {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 400%;
+}
+.grid-servicios .titulos-servicios .titulos .subtitulo-servicios {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 125%;
+}
+.grid-servicios .titulos-servicios .descripcion-serv {
+  padding-right: 90px;
+  justify-content: center;
+  padding-right: 90px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.grid-servicios .titulos-servicios .descripcion-serv .servicios {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 0px;
+}
+.grid-servicios .titulos-servicios .descripcion-serv .boton-contacto {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 90%;
+  color: white;
+  background-color: #2C2918;
+  padding: 5px 15px;
+  text-align: center;
+  display: inline-block;
+  align-self: center;
+  text-decoration: none;
+  margin-top: 3%;
+}
+.grid-servicios .grid-servicios3 {
+  grid-column: 1/7;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url(../imagenes-videos/linea.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 0px 15px 40px 15px;
+}
+.grid-servicios .grid-servicios3 .servicio .tipos-servicios {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 650;
+  font-style: normal;
+  font-size: 100%;
+}
+.grid-servicios .grid-servicios3 .servicio .descripcion-servicios {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.grid-servicios .grid-servicios3 .servicio .flecha {
+  width: 40px;
+  height: 40px;
+}
+.grid-servicios .footer {
+  grid-column: 1/7;
+  grid-row: 4/5;
+  background-image: url(../imagenes-videos/footer.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 0.5px #CCCCCC solid;
+}
+.grid-servicios .footer .footer-elementos {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 0px 20px 0px 20px;
+  flex-wrap: wrap;
+}
+
+.boton-contacto:hover {
+  opacity: 0.9;
+  filter: brightness(200%);
+}
+
+.flecha:hover {
+  opacity: 0.7;
+  filter: brightness(100%);
+}
+
+/*# sourceMappingURL=styles.csss.map */
