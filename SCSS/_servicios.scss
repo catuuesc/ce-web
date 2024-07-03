@@ -6,8 +6,7 @@
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: 70px auto auto 60px;
-    width: 100vw;
-    height: 100vh;
+    @include size (100vw, 100vh);
     background-image: url(../imagenes-videos/servicios-fondo.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,9 +20,8 @@
         text-align: center;
         flex-direction: row-reverse;
         justify-content: space-between;
-        border-bottom: 1px solid #CCCCCC;
         flex-wrap: wrap;
-        background-color: white;
+        background-color: map-get($paleta-colores, Blanco);
     }
 
     .titulos-servicios {
@@ -33,61 +31,66 @@
         flex-direction: row;
         flex-wrap: wrap;
         text-align: center;
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
+        justify-content: center;
+        align-content: space-evenly;
+        padding: 2% 8% 2.5% 8%;
 
         .titulos {
             display: flex;
             justify-content: center;
             flex-direction: column;
-            width: 50%;
+            width: 100%;
+            grid-row: 1/4;
+            margin-bottom: 1%;
         
             .titulo-servicios {
-                font-family: "Public Sans", sans-serif;
+                font-family: $public-sans;
                 font-optical-sizing: auto;
                 font-weight: 400;
                 font-style: normal;
-                font-size: 400%;
+                font-size: 345%;
+                margin: 0px;
             }
 
             .subtitulo-servicios {
-                font-family: "Public Sans", sans-serif;
+                font-family: $public-sans;
                 font-optical-sizing: auto;
                 font-weight: 300;
                 font-style: normal;
-                font-size: 125%;
+                font-size: 120%;
             }
         }
 
         .descripcion-serv {
-            padding-right: 90px;
             justify-content: center;
-            padding-right:90px;
+            display: flex;
+            flex-direction: column;
 
             .servicios {
-                font-family: "Public Sans", sans-serif;
+                font-family: $public-sans;
                 font-optical-sizing: auto;
                 font-weight: 300;
+                font-size: 100%;
                 font-style: normal;
                 line-height: 1.5;
                 text-align: justify;
                 margin: 0px;
+                margin-bottom: 1%;
             }
 
             .boton-contacto {
-                font-family: "Public Sans", sans-serif;
+                font-family: $public-sans;
                 font-optical-sizing: auto;
                 font-weight: 300;
                 font-style: normal;
                 font-size: 90%;
-                color: white;
+                color: map-get($paleta-colores, Blanco);
                 background-color: #2C2918;
                 padding: 5px 15px;
-                text-align: center;
-                display: inline-block;
+                display: flex;
+                justify-content: center;
                 align-self: center;
                 text-decoration: none;
-                margin-top: 3%;
             }
         }
     }
@@ -110,7 +113,7 @@
             @extend .box-servicios;
 
             .tipos-servicios {
-                font-family: "Public Sans", sans-serif;
+                font-family: $public-sans;
                 font-optical-sizing: auto;
                 font-weight: 650;
                 font-style: normal;
@@ -118,7 +121,7 @@
             }
 
             .descripcion-servicios {
-                font-family: "Public Sans", sans-serif;
+                font-family: $public-sans;
                 font-optical-sizing: auto;
                 font-weight: 300;
                 font-style: normal;
@@ -128,34 +131,15 @@
             }
 
             .flecha {
-                width: 40px;
-                height: 40px;
+                @include size (40px, 40px);
             }
 
         }
     }
 
-    .footer {
+    .footer-servicios {
         grid-column: 1/7;
         grid-row: 4/5;
-        background-image: url(../imagenes-videos/footer.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        border: 0.5px #CCCCCC solid;
-
-        .footer-elementos{
-            display: flex;
-            flex-direction: row;
-            color: white;
-            justify-content: space-between;
-            width: 100%;
-            align-items: center;
-            padding: 0px 20px 0px 20px;
-            flex-wrap: wrap;
-        }
     }
 }
 

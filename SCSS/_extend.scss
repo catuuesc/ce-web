@@ -3,11 +3,47 @@
     flex-direction: column;
     background-color: #f1f1f1;
     padding: 30px;
-    border: 1px solid #DBB41A;
-    width: 300px;
-    height: 330px;
+    border: 1px solid map-get($paleta-colores, Mostaza);
+    @include size (300px, 330px);
     justify-content: space-around;
     text-align: center;
+}
+
+.overlay-galeria {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    @include size (100%, 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    top: 0px;
+}
+
+.titulo-hoover {
+    font-family: $public-sans;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 125%;
+}
+
+.descripcion-hoover {
+    font-family: $public-sans;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 85%;
+    margin: 0px 30px;
 }
 
 /*para llamar en otro parcials primero importar al parcial en el que se desea ocupar, y luego poner:

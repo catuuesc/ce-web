@@ -7,7 +7,7 @@
         justify-content: space-between;
         height: 220px;
         align-items: center;
-
+        
         .nav-container {
             padding-bottom: 5%;
             padding-left: 5%;
@@ -37,8 +37,7 @@
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
+    @include size (auto, auto);
     z-index: -2;
     object-fit: cover;
 }
@@ -75,8 +74,7 @@
     z-index: 100;
     right: 2.5%;
     bottom: 4%;
-    width: 56px;
-    height: 49px;
+    @include size (56px, 49px);
     transition: opacity 0.3s ease, filter 0.3s ease;
 
     &:hover {

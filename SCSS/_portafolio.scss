@@ -1,0 +1,237 @@
+@import "_extend.scss";
+
+/*PORTAFOLIO*/
+
+/*GRID PORTAFOLIO ELEMENTOS*/
+
+.grid-content-portafolio {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 70px auto auto 60px;
+
+    .header-portafolio {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .titulos-portafolio {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .titulo-portafolio {
+            font-family: "Public Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 375%;
+        }
+        
+        .subtitulo-portafolio {
+            font-family: "Public Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 125%;
+            letter-spacing: 2px;
+        }
+    }
+
+    .galeria-portafolio {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        display: grid; /*GRID GALERIA PORTAFOLIO*/
+        grid-template-columns: 40% 10% 5% 45%;
+        grid-template-rows: repeat (4, 25%);
+        padding: 0px 150px 50px 150px;
+
+        .img-agustin {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            padding: 3px;
+            position: relative; /*superposicion textos sobre imagenes*/
+
+            .portafolio-agustin {
+                width: 100%;
+                height: 100%;
+            }
+
+            .overlay-galeria {
+                @extend .overlay-galeria; /*superposicion textos sobre imagenes*/
+            }
+
+            .titulo-hoover {
+                @extend .titulo-hoover;
+            }
+            
+            .descripcion-hoover {
+                @extend .descripcion-hoover;
+            }
+
+        }
+        
+        .img-puntas {
+            grid-column: 3 / 5;
+            grid-row: 1 / 2;
+            padding: 3px;
+            position: relative; /*superposicion textos sobre imagenes*/
+
+            .portafolio-puntas{
+                width: 100%;
+                height: 100%;
+            }
+
+            .overlay-galeria {
+                @extend .overlay-galeria; /*superposicion textos sobre imagenes*/
+            }
+
+            .titulo-hoover {
+                @extend .titulo-hoover;
+            }
+            
+            .descripcion-hoover {
+                @extend .descripcion-hoover;
+            }
+        }
+        
+        .img-interior-puntas {
+            grid-column: 1 / 4;
+            grid-row: 2 / 3;
+            padding: 3px;
+            position: relative; /*superposicion textos sobre imagenes*/
+
+            .portafolio-interiorpuntas {
+                width: 100%;
+                height: 100%;
+            }
+
+            .overlay-galeria {
+                @extend .overlay-galeria; /*superposicion textos sobre imagenes*/
+            }
+
+            .titulo-hoover {
+                @extend .titulo-hoover;
+            }
+            
+            .descripcion-hoover {
+                @extend .descripcion-hoover;
+            }
+        }
+                    
+        .img-arpa {
+            grid-column: 4 / 5;
+            grid-row: 2 / 3;
+            padding: 3px;
+            position: relative; /*superposicion textos sobre imagenes*/
+
+            .portafolio-arpa {
+                width: 100%;
+                height: 100%;
+            }
+
+            .overlay-galeria {
+                @extend .overlay-galeria; /*superposicion textos sobre imagenes*/
+            }
+
+            .titulo-hoover {
+                @extend .titulo-hoover;
+            }
+            
+            .descripcion-hoover {
+                @extend .descripcion-hoover;
+            }
+        }
+        
+        .img-arpainterior {
+            grid-column: 1 / 5;
+            grid-row: 3 / 4;
+            padding: 3px;
+            position: relative; /*superposicion textos sobre imagenes*/
+
+            .portafolio-arpainterior {
+                width: 100%;
+                height: 100%;
+            }
+
+            .overlay-galeria {
+                @extend .overlay-galeria; /*superposicion textos sobre imagenes*/
+            }
+
+            .titulo-hoover {
+                @extend .titulo-hoover;
+            }
+            
+            .descripcion-hoover {
+                @extend .descripcion-hoover;
+            }
+        }
+                    
+        .img-baltazar {
+            grid-column: 1 / 3;
+            grid-row: 4 / 5;
+            padding: 3px;
+            position: relative; /*superposicion textos sobre imagenes*/
+
+            .portafolio-baltazar {
+                width: 100%;
+                height: 100%;
+            }
+
+            .overlay-galeria {
+                @extend .overlay-galeria; /*superposicion textos sobre imagenes*/
+            }
+
+            .titulo-hoover {
+                @extend .titulo-hoover;
+            }
+            
+            .descripcion-hoover {
+                @extend .descripcion-hoover;
+            }
+        }
+        
+        .img-oblicua {
+            grid-column: 3 / 5;
+            grid-row: 4 / 5;
+            padding: 3px;
+
+            .portafolio-oblicua {
+                width: 100%;
+                height: 100%;
+            }
+
+            .overlay-galeria {
+                @extend .overlay-galeria; /*superposicion textos sobre imagenes*/
+            }
+
+            .titulo-hoover {
+                @extend .titulo-hoover;
+            }
+            
+            .descripcion-hoover {
+                @extend .descripcion-hoover;
+            }
+        }
+    }
+
+
+    .footer-portafolio {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+}
+
+/*superposicion textos sobre imagenes*/
+
+.img-agustin:hover .overlay-galeria, .img-puntas:hover .overlay-galeria, .img-interior-puntas:hover .overlay-galeria, .img-arpa:hover .overlay-galeria, .img-arpainterior:hover .overlay-galeria, .img-baltazar:hover .overlay-galeria {
+    opacity: 1;
+}
+
+/*end*/
+
+
+
