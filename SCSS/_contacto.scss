@@ -1,0 +1,131 @@
+/*CONTACTO*/
+
+.grid-contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 70px auto 60px;
+    height: 100vh; /* Altura del 100% del viewport */
+
+    .header-contacto {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        flex-direction: row;
+        
+        .nav-container {
+            padding: 0px;
+        }
+    }
+
+    .sec2-contacto {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+        background-image: url(../imagenes-videos/background-contacto.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        .datos-contacto {
+            
+            .contacto-imgs {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .icono-datos {
+                    @include size (22px, 22px);
+                }
+
+                .titulo-datos {
+                    font-family: "Public Sans", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-size: 87.5%;
+                    color: white;
+                    margin: 0px;
+                    padding-left: 15px;
+                }
+            }
+
+            p {
+                padding-top: 10px;
+                font-family: "Public Sans", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 00;
+                font-style: normal;
+                font-size: 75%;
+                color: white;
+            }
+        }
+
+        .formulario {
+            border: 0.5px black solid;
+            padding: 40px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            width: 468px;
+            height: 479px;
+
+            h1 {
+                font-family: "IBM Plex Serif", serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 156.25%;
+                text-align: center;
+            }
+
+            .item {
+                border-bottom: 0.5px black solid;
+                padding-top: 10px;
+
+                input {
+                    font-family: "Public Sans", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 300;
+                    font-style: normal;
+                    font-size: 75%;
+                    color: #AFAFAF;
+                    border: none;
+                    background: none;
+                    outline: none;
+                }
+                
+                textarea {
+                    font-family: "Public Sans", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 300;
+                    font-style: normal;
+                    font-size: 75%;
+                    color: #AFAFAF;
+                    border: none;
+                    background: none;
+                    outline: none;
+                }
+                
+            }
+
+            .enviar {
+                font-family: "Public Sans", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 600;
+                font-style: normal;
+                font-size: 81.25%;
+                color: #585858;
+                position: relative;
+                left: 43%;
+                top: 20px;
+            }
+        }
+    }
+    
+    .footer-contacto {
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+}
