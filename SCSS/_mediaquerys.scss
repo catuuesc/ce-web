@@ -99,6 +99,7 @@
         display: flex;
         flex-direction: row-reverse !important;
         padding: 0px 25px !important;
+        height: 70px !important;
 
         .checkbtn {
             display: block;
@@ -237,9 +238,9 @@
     }
 }
 
-/*PORTAFOLIO*/
+                        /*PORTAFOLIO*/
 
-@media only screen and (max-width:820px) {
+@media only screen and (max-width:1024px) {
 
     .titulos-portafolio {
         .titulo-portafolio {
@@ -309,12 +310,109 @@
 
     .img-agustin:hover div, .img-puntas:hover div, .img-interior-puntas:hover div, .img-arpa:hover div, .img-arpainterior:hover div,
     .img-baltazar:hover div, .img-oblicua:hover div {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 
     .img-agustin:hover img, .img-puntas:hover img, .img-interior-puntas:hover img, .img-arpa:hover img, .img-arpainterior:hover img,
     .img-baltazar:hover img, .img-oblicua:hover img {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 }
 
+                        /*SERVICIOS*/
+
+@media only screen and (max-width:1024px) {
+
+    .grid-servicios {
+        background-image: url(../imagenes-videos/servicios-fondo.png) !important; /*no pude hacer que el background ocupe toda la pantalla y no entiendo por qué*/
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+
+        .titulos-servicios {
+
+            .titulos {
+                margin-top: 38px !important;
+                margin-bottom: 38px !important;
+            }
+
+            .descripcion-serv {
+                margin-bottom: 38px !important;
+
+                .servicios {
+                    margin-bottom: 38px !important;
+                    padding-left: 20px !important;
+                    padding-right: 20px !important;
+                }
+            }
+        }
+
+        .grid-servicios3 {
+            padding-bottom: 0px !important;
+            background-image: none !important;
+
+            .servicio {
+                margin-bottom: 38px;
+            }
+        }
+    }
+}
+
+                        /*NOSOTROS*/
+
+@media only screen and (max-width:820px) {
+
+    .grid-nosotros {
+        display: flex !important;
+        flex-direction: column;
+
+        .header-nosotros {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+        }
+
+        .sobre-nosotros {
+            .titulo-nosotros {
+                display: flex !important;
+                align-content: center !important; /*no puedo centrar el titulo, no se por qué*/
+                margin-bottom: 25px !important;
+            }
+
+            .p-nosotros {
+                margin-bottom: 25px !important;
+            }
+        }
+
+        .img-nosotros1 {
+            .img-nosotros {
+                width: 355px !important;
+                height: 230px !important;
+            }
+        }
+
+        .pilares {
+            margin-top: 25px !important;
+            padding-bottom: 0px !important;
+            margin-bottom: 25px !important;
+
+            img {
+                margin-bottom: 25px !important;
+            }
+        }
+
+        .imagenes-secdos {
+            justify-content: space-evenly !important;
+            margin-bottom: 25px !important;
+
+            img {
+                width: 170px !important;
+                height: 280px !important;
+                margin: 0px !important;
+            }
+        }
+
+        .footer-nosotros {
+            padding-top: 14px !important;
+            padding-bottom: 14px !important;
+        }
+    }
+}

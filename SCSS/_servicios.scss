@@ -18,10 +18,10 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        flex-direction: row-reverse;
+        flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
-        background-color: map-get($paleta-colores, Blanco);
+        /*background-color: map-get($paleta-colores, Blanco);*/
     }
 
     .titulos-servicios {
