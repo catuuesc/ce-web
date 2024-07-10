@@ -350,7 +350,6 @@ ejemplo {
 @media only screen and (max-width: 1024px) {
   .grid-servicios {
     width: 100vw;
-    height: 100vh;
     background-image: url(../imagenes-videos/servicios-responsive.png) !important; /*no pude hacer que el background ocupe toda la pantalla y no entiendo por qué*/
     background-size: cover !important;
     background-repeat: no-repeat !important;
@@ -373,7 +372,8 @@ ejemplo {
   }
   .grid-servicios .grid-servicios3 .servicio {
     margin-bottom: 38px;
-    animation-delay: 50ms !important;
+    animation-delay: 500ms !important;
+    animation-duration: 100ms !important;
   }
 }
 /*NOSOTROS*/
@@ -662,7 +662,7 @@ ejemplo {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 70px auto auto 60px;
   width: 100vw;
-  height: 100vh;
+  /*@include size (100vw, 100vh);*/
   background-image: url(../imagenes-videos/servicios-fondo.png);
   background-repeat: no-repeat;
   background-size: cover;
