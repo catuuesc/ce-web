@@ -279,42 +279,50 @@
             grid-row: 1 / 2 !important;
             display: flex;
             flex-direction: column;
+            animation-delay: 100ms !important
         }
 
         .img-puntas {
             width: 100%;
             grid-column: 1 / 2 !important;
             grid-row: 2 / 3 !important;
+            animation-delay: 100ms !important
         }
 
         .img-interior-puntas {
             width: 100%;
             grid-column: 1 / 2 !important;
             grid-row: 3 / 4 !important;
+            animation-delay: 100ms !important
         }
 
         .img-arpa {
             width: 100%;
             grid-column: 1 / 2 !important;
             grid-row: 4 / 5 !important;
+            animation-delay: 100ms !important
         }
 
         .img-arpainterior {
             width: 100%;
             grid-column: 1 / 2 !important;
             grid-row: 5 / 6 !important;
+            animation-delay: 100ms !important
         }
 
         .img-baltazar {
             width: 100%;
             grid-column: 1 / 2 !important;
             grid-row: 6 / 7 !important;
+            animation-delay: 100ms !important
         }
 
         .img-oblicua {
+            display: none;
             width: 100%;
             grid-column: 1 / 2 !important;
             grid-row: 7 / 8 !important;
+            animation-delay: 100ms !important
         }
     }
 
@@ -334,7 +342,8 @@
 @media only screen and (max-width:1024px) {
 
     .grid-servicios {
-        background-image: url(../imagenes-videos/servicios-fondo.png) !important; /*no pude hacer que el background ocupe toda la pantalla y no entiendo por qué*/
+        @include size (100vw, 100vh);
+        background-image: url(../imagenes-videos/servicios-responsive.png) !important; /*no pude hacer que el background ocupe toda la pantalla y no entiendo por qué*/
         background-size: cover !important;
         background-repeat: no-repeat !important;
 
@@ -362,6 +371,7 @@
 
             .servicio {
                 margin-bottom: 38px;
+                animation-delay: 50ms !important;
             }
         }
     }
