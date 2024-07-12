@@ -14,7 +14,6 @@
     .contenedor-index {
         width: 100vw !important;
         height: 100vh;
-        overflow: hidden !important;
 
         .video-background {
             width: 100%!important;
@@ -110,14 +109,15 @@
             cursor: pointer;
         }
 
-        nav {
+        .nav-container {
+
             .barra-navegacion {
                 padding: 35px 0px;
                 position: fixed;
                 background: map-get($paleta-colores, Negro);
-                width: 70%;
-                height: 60%;
-                right: -100%;
+                width: 70% !important;
+                height: 60% !important;
+                right: -100% !important;
                 transition: right 0.5s ease;
                 text-align: center;
                 display: flex;
@@ -140,6 +140,7 @@
                 }
             }
         }
+        
         a {
             .logo-nav {
             display: none;
@@ -157,7 +158,7 @@
     }
 
     #check:checked ~ .nav-container .barra-navegacion {
-        right: 0;
+        right: 0 !important;
     }
 }
 
