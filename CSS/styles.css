@@ -93,11 +93,13 @@ ejemplo {
 @media only screen and (max-width: 1024px) {
   .contenedor-index {
     width: 100vw !important;
-    height: 100vh;
+    height: 100vh !important;
+    overflow: hidden !important;
   }
   .contenedor-index .video-background {
     width: 100% !important;
     height: 100% !important;
+    overflow: hidden !important;
   }
   .contenedor-index .pag-index .header-index {
     display: flex;
