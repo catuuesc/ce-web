@@ -82,16 +82,22 @@ body {
     padding: 0px 25px 0px 40px;
     border-bottom: 1px solid #CCCCCC;
     
-    .barra-navegacion {
-        align-items: center;
-        width: 550px;
-        justify-content: space-between;
+    .nav-container {
+        .barra-navegacion {
+            align-items: center;
+            width: 550px;
+            justify-content: space-between;
 
-        li {
-            a {
-                color: black;
+            li {
+                a {
+                    color: black;
+                }
             }
         }
+    }
+
+    .responsive {
+        display: none;
     }
 }
 

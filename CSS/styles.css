@@ -92,12 +92,12 @@ ejemplo {
 /*INDEX*/
 @media only screen and (max-width: 1024px) {
   .contenedor-index {
-    width: 100vw;
-    height: 100vh;
+    width: 100vw !important;
+    height: 100vh !important;
   }
   .contenedor-index .video-background {
-    width: 100vw;
-    height: 100vh;
+    width: 100vw !important;
+    height: 100vh !important;
   }
   .contenedor-index .pag-index .header-index {
     display: flex;
@@ -193,10 +193,13 @@ ejemplo {
     text-decoration: none !important;
     border-bottom: none !important;
   }
-  .header-servicios .logo-nav {
+  .header-servicios a .logo-nav {
     display: none;
   }
-  .header-servicios .logo-responsive {
+  .header-servicios .responsive {
+    display: block !important;
+  }
+  .header-servicios .responsive .logo-responsive {
     display: flex;
     width: 190px;
     height: 50px;
@@ -289,7 +292,7 @@ ejemplo {
     grid-template-rows: repeat(7, auto) !important;
     width: 100vw !important;
     padding: 0px 20px 20px 20px !important;
-    gap: 20px;
+    gap: 20px !important;
   }
   .galeria-portafolio .img-agustin {
     width: 100%;
@@ -350,7 +353,7 @@ ejemplo {
 @media only screen and (max-width: 1024px) {
   .grid-servicios {
     width: 100vw;
-    background-image: url(../imagenes-videos/servicios-responsive.png) !important; /*no pude hacer que el background ocupe toda la pantalla y no entiendo por qué*/
+    background-image: url(../imagenes-videos/servicios-responsive.jpg) !important; /*no pude hacer que el background ocupe toda la pantalla y no entiendo por qué*/
     background-size: cover !important;
     background-repeat: no-repeat !important;
   }
@@ -496,13 +499,16 @@ body {
   padding: 0px 25px 0px 40px;
   border-bottom: 1px solid #CCCCCC;
 }
-.header-servicios .barra-navegacion {
+.header-servicios .nav-container .barra-navegacion {
   align-items: center;
   width: 550px;
   justify-content: space-between;
 }
-.header-servicios .barra-navegacion li a {
+.header-servicios .nav-container .barra-navegacion li a {
   color: black;
+}
+.header-servicios .responsive {
+  display: none;
 }
 
 .barra-navegacion .nav-item:hover .nav-link {
@@ -1157,6 +1163,8 @@ ejemplo {
   font-style: normal;
   font-size: 75%;
   color: white;
+  border-bottom: none;
+  list-style-type: none;
 }
 .grid-contacto .sec2-contacto .formulario {
   border: 0.5px black solid;
@@ -1174,11 +1182,17 @@ ejemplo {
   font-size: 156.25%;
   text-align: center;
 }
-.grid-contacto .sec2-contacto .formulario .item {
+.grid-contacto .sec2-contacto .formulario form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.grid-contacto .sec2-contacto .formulario form .item {
   border-bottom: 0.5px black solid;
   padding-top: 10px;
+  width: 100%;
 }
-.grid-contacto .sec2-contacto .formulario .item input {
+.grid-contacto .sec2-contacto .formulario form .item input {
   font-family: "Public Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -1189,7 +1203,7 @@ ejemplo {
   background: none;
   outline: none;
 }
-.grid-contacto .sec2-contacto .formulario .item textarea {
+.grid-contacto .sec2-contacto .formulario form .item textarea {
   font-family: "Public Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -1200,16 +1214,17 @@ ejemplo {
   background: none;
   outline: none;
 }
-.grid-contacto .sec2-contacto .formulario .enviar {
+.grid-contacto .sec2-contacto .formulario form .enviar {
   font-family: "Public Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
   font-size: 81.25%;
   color: #585858;
-  position: relative;
-  left: 43%;
-  top: 20px;
+  width: 70px;
+  margin-top: 20px;
+  background-color: #F7F7F7;
+  border: grey solid 1px;
 }
 .grid-contacto .footer-contacto {
   grid-column: 1/3;
