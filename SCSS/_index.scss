@@ -1,6 +1,8 @@
 
 .pag-index {
     height: 100vh;
+    overflow: hidden !important;
+    
     .header-index {
         display: flex;
         flex-direction: row;
