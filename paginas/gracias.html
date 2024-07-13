@@ -51,42 +51,10 @@
         </header>
         
         <div class="sec2-contacto">
-            <section class="formulario" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="700">
-                <h1>CONTÁCTANOS</h1>
-                <form action="form.php" method="post">
-                    <div class="item">
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido"> 
-                    </div>
-                    <div class="item">
-                        <input type="text" name="correo" id="correo" placeholder="Correo electrónico">
-                    </div>
-                    <div class="item">
-                        <input type="text" name="numero" id="numero" placeholder="Teléfono">
-                    </div>
-                    <div class="item">
-                        <textarea class="item" name="comentarios" id="comentarios" placeholder="Mensaje" cols="30" rows="10"></textarea>
-                    </div>
-                    <input class="enviar" type="submit">
-                </form>
-            </section>
-
-            <section class="datos-contacto">
-                <div class="contacto-imgs">
-                    <img src="../imagenes-videos/telefono.png" alt="Ícono telefono" class="icono-datos">
-                    <h2 class="titulo-datos">LLÁMANOS</h2>
-                </div>
-                <p>9 2687 8412</p>
-                <div class="contacto-imgs">
-                    <img src="../imagenes-videos/direccion.png" alt="Ícono dirección" class="icono-datos">
-                    <h3 class="titulo-datos">DIRECCIÓN</h3>
-                </div>
-                <p>Calle Crucero #299, Purranque, Chile</p>
-                <div class="contacto-imgs">
-                    <img src="../imagenes-videos/correo.png" alt="Ícono correo electrónico" class="icono-datos">
-                    <h4 class="titulo-datos">CORREO ELECTRÓNICO</h4>
-                </div>
-                <p>cimientoestudio@gmail.com</p>
-            </section>
+            <div class="mensaje-gracias">
+                <h1>¡Gracias por contactarnos!</h1>
+                <p>Nos pondremos en contacto contigo a la brevedad.</p>
+            </div>
         </div>
 
         <footer class="footer footer-contacto">
@@ -107,6 +75,12 @@
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+
+    <script>
+        setTimeout(function(){
+            window.location.replace ("contacto.html");
+            }, 6000)
     </script>
 </body>
 </html>

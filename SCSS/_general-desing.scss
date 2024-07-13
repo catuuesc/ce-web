@@ -113,3 +113,13 @@ body {
     @include size (150px, 206px);
     flex-wrap: wrap;
 }
+
+/*MENSAJE LUEGO DE ENVIAR FORMULARIO*/
+
+.mensaje-gracias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
