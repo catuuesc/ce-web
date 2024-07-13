@@ -16,10 +16,9 @@ $mensaje .= "Enviado el " . date('d/m/Y', time());
 $para = 'cimientoestudio@gmail.com';
 $asunto = 'Contacto desde formulario Cimiento Estudio';
 
+/*Redirección al enviar el formulario*/
+header('Location:gracias.html');
+
 /*funcion mail*/
 mail($para, $asunto, utf8_decode($mensaje), $header);
-
-/*Redirección al enviar el formulario*/
-header('Location: gracias.html');
-
 ?>
