@@ -267,8 +267,7 @@
     
     .titulos-portafolio {
         .titulo-portafolio {
-            font-weight: 300;
-            font-size: 300%;
+            font-size: 300% !important;
         }
         
         .subtitulo-portafolio {
@@ -278,63 +277,50 @@
     }
 
     .galeria-portafolio {
-        display: grid !important;
-        grid-template-columns: 100% !important;
-        grid-template-rows: repeat(7,auto) !important;
+        display: flex!important;
+        flex-direction: column !important;
         width: 100vw !important;
         padding: 0px 20px 20px 20px !important;
-        gap: 20px !important;
 
         .img-agustin {
             width: 100%;
             height: 100%;
-            grid-column: 1 / 2 !important;
-            grid-row: 1 / 2 !important;
-            display: flex;
-            flex-direction: column;
             animation-delay: 100ms !important
         }
 
         .img-puntas {
             width: 100%;
-            grid-column: 1 / 2 !important;
-            grid-row: 2 / 3 !important;
+            height: 100%;
             animation-delay: 100ms !important
         }
 
         .img-interior-puntas {
             width: 100%;
-            grid-column: 1 / 2 !important;
-            grid-row: 3 / 4 !important;
+            height: 100%;
             animation-delay: 100ms !important
         }
 
         .img-arpa {
             width: 100%;
-            grid-column: 1 / 2 !important;
-            grid-row: 4 / 5 !important;
+            height: 100%;
             animation-delay: 100ms !important
         }
 
         .img-arpainterior {
             width: 100%;
-            grid-column: 1 / 2 !important;
-            grid-row: 5 / 6 !important;
+            height: 100%;
             animation-delay: 100ms !important
         }
 
         .img-baltazar {
             width: 100%;
-            grid-column: 1 / 2 !important;
-            grid-row: 6 / 7 !important;
+            height: 100%;
             animation-delay: 100ms !important
         }
 
         .img-oblicua {
-            display: none;
             width: 100%;
-            grid-column: 1 / 2 !important;
-            grid-row: 7 / 8 !important;
+            height: 100%;
             animation-delay: 100ms !important
         }
     }

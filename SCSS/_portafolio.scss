@@ -46,7 +46,7 @@
         grid-row: 3 / 4;
         display: grid; /*GRID GALERIA PORTAFOLIO*/
         grid-template-columns: 40% 10% 5% 45%;
-        grid-template-rows: repeat (4, auto) !important;
+        grid-template-rows: 23% 23% 31% 23% !important;
         padding: 0px 150px 50px 150px;
         gap: 5px;
 
@@ -192,6 +192,7 @@
         .img-oblicua {
             grid-column: 3 / 5;
             grid-row: 4 / 5;
+            position: relative;
 
             .portafolio-oblicua {
                 width: 100%;
@@ -221,7 +222,7 @@
 
 /*superposicion textos sobre imagenes*/
 
-.img-agustin:hover .overlay-galeria, .img-puntas:hover .overlay-galeria, .img-interior-puntas:hover .overlay-galeria, .img-arpa:hover .overlay-galeria, .img-arpainterior:hover .overlay-galeria, .img-baltazar:hover .overlay-galeria {
+.img-agustin:hover .overlay-galeria, .img-puntas:hover .overlay-galeria, .img-interior-puntas:hover .overlay-galeria, .img-arpa:hover .overlay-galeria, .img-arpainterior:hover .overlay-galeria, .img-baltazar:hover .overlay-galeria, .img-oblicua:hover .overlay-galeria {
     opacity: 1;
 }
 
